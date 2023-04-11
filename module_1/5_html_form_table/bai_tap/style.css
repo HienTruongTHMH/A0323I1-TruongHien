@@ -1,0 +1,25 @@
+.my-caption {
+    caption-side: top;
+    font-weight: bold;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+th{
+    font-size:16px;
+    color:black;
+    background-color: yellow;
+    border-color: black;
+}
+td{
+    background-color: #e0e0e0;
+    color:black;
+    font-size:13px;
+    border-bottom:1px solid black;
+}
