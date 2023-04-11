@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+</head>
+<body>
+    <form action="dang_ky_hoc_vien.html" method="post" style="background: khaki">
+        <table>
+            <th colspan="3" style="background: lightblue; color: blue">Đăng ký học viên</th>
+            <tr>
+                <td>Họ và tên:</td>
+                <td colspan="2"><input type="text" placeholder="Họ và tên"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh:</td>
+                <td colspan="2"><input type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td>Giới tính:</td>
+                <td><input type="radio" name="gender" value="1">Nam
+                    <input type="radio" name="gender" value="0">Nữ</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:</td>
+                <td><textarea cols="20" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select>
+                        <option>--Chọn Lớp--</option>
+                        <option>A03</option>
+                        <option>A02</option>
+                        <option>A01</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Đăng ký">
+                <input type="button" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

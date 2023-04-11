@@ -2,15 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form order basic</title>
 </head>
 <body>
-    <form method="get" action="simpleform.html">
+<style>
+    .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
+    <form method="get" action="simpleform.html" class="wufoo">
         <h1>Order form</h1>
         <h2>Bạn muốn mua gì ?</h2>
         <select>
-            
+            <option name="thit bo" value="bo">Thịt bò</option>
+            <option name="thit ca" value="ca">thịt cá</option>
+            <option name="rau" value="rau">rau</option>
         </select>
+        <h2>Bạn muốn lấy bao nhiêu tiền ?</h2>
+        <input type="radio" name="10vnd" value="10">10 ngàn(1kg / 1 chùm rau)<br>
+        <input type="radio" name="20vnd" value="20">20 ngàn(2kg / 2 chùm rau)<br>
+        <p>Name<span style="color: crimson">*</span></p>
+        <input type="text" name="fname" placeholder="Họ" size="20">
+        <input type="text" name="lname" placeholder="Tên" size="20">
+        <p>Email</p>
+        <input type="text" placeholder="Email" name="email" size="30">
+        <p>Số điện thoại</p>
+        <input type="text" name="so1" placeholder="2 số" size="5"/> -
+        <input type="text" name="so2" placeholder="4 số giữa" size="5"/> -
+        <input type="text" name="so3" placeholder="4 số cuối" size="5">
+        <p><input type = "button" name="btSubmit" value="Submit"/>
+            <input type="reset" name="btReset" value="Reset"></p>
     </form>
 </body>
 </html>
