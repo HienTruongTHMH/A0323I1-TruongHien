@@ -1,0 +1,21 @@
+#box{
+    color: blue;
+}
+#box_2 {
+    border-collapse: collapse;
+    border-style: solid;
+}
+.yel {
+    background-color: yellow;
+}
+.ora {
+    background-color: orange;
+}
+.left {
+    text-align: left;
+    color: blue;
+}
+.right {
+    text-align: right;
+    color: blue;
+}
