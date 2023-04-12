@@ -1,0 +1,17 @@
+#f-head {
+    vertical-align: center;
+    color: blue;
+}
+.right {
+    text-align: right;
+    color: darkcyan;
+}
+.left {
+    text-align: left;
+    color: darkcyan;
+}
+#box {
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+}
