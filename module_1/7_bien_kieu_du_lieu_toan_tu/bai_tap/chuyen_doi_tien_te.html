@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p style="font-size: 20px"><b>Amount</b></p>
+    <input type="number" id="number">
+    <p style="font-size: 20px"><b>From Currency</b></p>
+        <select name="money" id="beChanged">
+            <option name="money">Chọn đơn vị tiền tệ</option>
+            <option name="money" value="1">Việt Nam</option>
+            <option name="money" value="23000">USD</option>
+        </select>
+    <p style="font-size: 20px"><b>To Currency</b></p>
+        <select name="monney" id="changed">
+            <option name="money">Chọn đơn vị muốn đổi</option>
+            <option name="money" value="1">Việt Nam</option>
+            <option name="money" value="23000">USD</option>
+        </select>
+    <button style="background-color: purple; color: white" onclick="convert()">Convert</button>
+</form>
+</body>
+<script>
+    function convert() {
+        let a = parseInt(document.getElementById("number").value);
+        let from = parseInt(document.getElementById("beChanged").value);
+        let to = parseInt(document.getElementById("changed").value);
+        let change = (a * to) / from;
+        alert('Đổi thành công' + change);
+    }
+</script>
+</html>

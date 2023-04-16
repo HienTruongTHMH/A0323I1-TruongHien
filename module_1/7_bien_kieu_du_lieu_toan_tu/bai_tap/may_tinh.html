@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Caculator</h1>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <input type="button"  onclick="cong()" value="Cong" >
+    <input type="button"  onclick="tru()" value="Tru" >
+    <input type="button"  onclick="nhan()" value="Nhan" >
+    <input type="button" onclick="chia()" value="Chia" >
+    <button type="button" onclick="ca()">Bấm vào đây</button>
+</form>
+</body>
+<script>
+    let a = parseInt(document.getElementById('number1').value);
+    let b = parseInt(document.getElementById("number2").value);
+    let save;
+    function cong() {
+        save = a + b;
+    }
+    function tru() {
+        save = a - b;
+    }
+    function nhan() {
+        save = a * b;
+    }
+    function chia() {
+        save = a / b;
+    }
+    function ca() {
+        saved = parseInt(save);
+        alert('ket qua la' + saved);
+    }
+</script>
+</html>
