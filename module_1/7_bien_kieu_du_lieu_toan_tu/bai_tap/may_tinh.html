@@ -9,32 +9,50 @@
     <h1>Caculator</h1>
     <input type="number" id="number1">
     <input type="number" id="number2">
-    <input type="button"  onclick="cong()" value="Cong" >
-    <input type="button"  onclick="tru()" value="Tru" >
-    <input type="button"  onclick="nhan()" value="Nhan" >
-    <input type="button" onclick="chia()" value="Chia" >
-    <button type="button" onclick="ca()">Bấm vào đây</button>
+    <button type="button" onclick="add()">Add +</button>
+    <button type="button" onclick="sub()">Sub -</button>
+    <button type="button" onclick="mul()">Mul *</button>
+    <button type="button" onclick="divi()">Divi /</button>
+    <button type="button"  id='result' onclick="ca()">Bấm vào đây</button>
 </form>
 </body>
 <script>
-    let a = parseInt(document.getElementById('number1').value);
-    let b = parseInt(document.getElementById("number2").value);
+
     let save;
-    function cong() {
-        save = a + b;
+    function add() {
+        let a = document.getElementById('number1').value;
+        let b = document.getElementById("number2").value;
+        let num1 , num2;
+        num1 = parseInt(a);
+        num2 = parseInt(b);
+        save = num1 + num2;
     }
-    function tru() {
-        save = a - b;
+    function sub() {
+        let a = document.getElementById('number1').value;
+        let b = document.getElementById("number2").value;
+        let num1 , num2;
+        num1 = parseInt(a);
+        num2 = parseInt(b);
+        save = num1 - num2;
     }
-    function nhan() {
-        save = a * b;
+    function mul() {
+        let a = document.getElementById('number1').value;
+        let b = document.getElementById("number2").value;
+        let num1 , num2;
+        num1 = parseInt(a);
+        num2 = parseInt(b);
+        save = num1 * num2;
     }
-    function chia() {
-        save = a / b;
+    function divi() {
+        let a = document.getElementById('number1').value;
+        let b = document.getElementById("number2").value;
+        let num1 , num2;
+        num1 = parseInt(a);
+        num2 = parseInt(b);
+        save = num1 / num2;
     }
     function ca() {
-        saved = parseInt(save);
-        alert('ket qua la' + saved);
+        document.getElementById('result').innerHTML = save;
     }
 </script>
 </html>
