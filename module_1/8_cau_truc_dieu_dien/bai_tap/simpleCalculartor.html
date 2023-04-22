@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <table>
+        <tr><td id="result" onclick="disPlay()" colspan="4">0</td></tr>
+        <tr> // getNumber(x);
+            <td><button onclick="getNumBer(1)" >1</button></td>
+            <td><button onclick="getNumBer(2)">2</button></td>
+            <td><button onclick="getNumBer(2)">3</button></td>
+            <td><button onclick="cal('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="getNumBer(4)">4</button></td>
+            <td><button onclick="getNumBer(5)">5</button></td>
+            <td><button onclick="getNumBer(6)">6</button></td>
+            <td><button onclick="cal('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="getNumBer(7)">7</button></td>
+            <td><button onclick="getNumBer(8)">8</button></td>
+            <td><button onclick="getNumBer(9)">9</button></td>
+            <td><button onclick="cal('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button type="reset" onclick="res()">C</button></td>
+            <td><button onclick="getNumBer(0)">0</button></td>
+            <td><button onclick="doCal()">=</button></td>
+            <td><button onclick="cal('/')">/</button></td>
+        </tr>
+    </table>
+
+<script>
+    var input = "";
+    function getNumBer(val) {
+        document.getElementById('result').innerText = val;
+        input = input + val;
+    }
+    function cal(dau) {
+        document.getElementById('result').innerText = dau;
+        input+=dau;
+    }
+    function doCal() {
+        document.getElementById('result').innerText = eval(input);
+    }
+    function res() {
+        document.getElementById('result').innerText="0";
+
+    }
+</script>
+</body>
+</html>

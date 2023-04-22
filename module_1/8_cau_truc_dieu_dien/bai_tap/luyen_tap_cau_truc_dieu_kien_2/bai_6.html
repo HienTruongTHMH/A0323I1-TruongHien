@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    var x, a,b; // pt bậc 1 có dạng ax + b = 0;
+    a = +prompt('Nhập vào a để tính pt bậc nhất');
+    b = +prompt('Nhập vào b để tính pt bậc nhất');
+    if(a != parseInt(a) && b != parseInt(b)){
+        alert('input sai, nhập lại đi');
+    }else if(a == 0 && b == 0){
+        alert('Đây là pt bậc 1 có vô số nghiệm');
+    }else if (a == 0 && b != 0){
+        alert('Pt này vô nghiệm');
+    }else{
+        alert('Đây là pt bậc 1');
+        alert('Có công thức là: ' + a + ' x ' + ' + '+b+' =0');
+        alert(x = -b / a + ' là nghiệm của pt' );
+    }
+</script>
+</body>
+</html>

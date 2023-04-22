@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let a, b, c, max;
+    a = +prompt("Nhập vào số bất kì để kiểm tra");
+    b = +prompt("Nhập vào số bất kì để kiểm tra");
+    c = +prompt("Nhập vào số bất kì để kiểm tra");
+    if(a >= b && a >= c) {
+        max = a;
+    } else if(b >= c && b >= a ) {
+        max = b;
+    } else {
+        max = c;
+    }
+    console.log(max);
+    document.write('Số lớn nhất là' + max);
+</script>
+</body>
+</html>

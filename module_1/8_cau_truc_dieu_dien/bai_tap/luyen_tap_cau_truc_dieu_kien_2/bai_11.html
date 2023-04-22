@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<script>
+    var salary, tax, percent;
+    salary = +prompt('Nhập vào mức lương hằng tháng của bạn');
+    if(salary < 5){
+        percent = 5 / 100;
+    } else if (salary >= 5 && salary < 15){
+        percent = 10 / 100;
+    } else if ( salary >=15 && salary < 20){
+        percent = 15 / 100;
+    }
+    tax = salary * percent;
+    alert('Thuế thu nhập bạn phải đống là: ' + tax);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 12</title>
+</head>
+<body>
+<script>
+    var soTienBanDau, laiXuat, soThangChoVay, laiNganHang, tienLai;
+    soTienBanDau = +prompt('Nhập vào số tiền ban đầu');
+    soThangChoVay = +prompt('Nhập vào số tháng bạn vay');
+    if(soTienBanDau != parseInt(soTienBanDau) && soThangChoVay != parseInt(soThangChoVay)){
+        alert('Thông tin không đúng vui lòng nhập lại');
+    } else if (soThangChoVay <= 3){
+        laiXuat = 30 / 100;
+    } else if (soThangChoVay <= 6 && soThangChoVay > 3){
+        laiXuat = 45/100;
+    } else if (soThangChoVay > 6 && soThangChoVay <= 12){
+        laiXuat = 60/100;
+    }
+    tienLai = soTienBanDau * laiXuat;
+    laiNganHang = soTienBanDau + tienLai;
+    alert('Lãi ngân hàng bạn phải trả là: ' + laiNganHang);
+</script>
+</body>
+</html>

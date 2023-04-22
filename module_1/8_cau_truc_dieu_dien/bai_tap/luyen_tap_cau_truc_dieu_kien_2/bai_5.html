@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    var a,b,s; // là 2 cạnh kề tam giác vuông.
+            // s là diện tích
+    a = +prompt('Nhập vào cạnh a cua tam giác');
+    b = +prompt('Nhập vào cạnh b cua tam giác');
+    if(a == parseInt(a) && b == parseInt(b)){
+        if(a != b ){
+            alert('Đây là tam giác vuông')
+            s = 1/2 * a * b;
+            alert('Diện tích tam giác là '+ s);
+        } else if (a == b){
+            alert('Đây là tam giác vuông cân');
+            s = 1/2 * a * b;
+            alert('Diện tích tam giác là '+ s);
+        }
+    } else {
+        alert('input sai, nhập lại đi');
+    }
+</script>
+</body>
+</html>

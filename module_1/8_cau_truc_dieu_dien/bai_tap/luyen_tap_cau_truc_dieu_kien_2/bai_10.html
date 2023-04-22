@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<script>
+    var pay, kwh, money;
+    kwh = +prompt('Số kwh bạn đã dùng');
+    if(kwh>=0 && kwh<=50){
+        money = 1000;//vnd
+
+    } else if(kwh>50 && kwh <= 80 ){
+        money = 2000;
+    }else if(kwh>80 && kwh <=120){
+        money = 3000;
+    }
+    pay = kwh * money;
+    alert('Số tiền điện bạn phải trả là: '+ pay+'vnđ');
+
+</script>
+</body>
+</html>

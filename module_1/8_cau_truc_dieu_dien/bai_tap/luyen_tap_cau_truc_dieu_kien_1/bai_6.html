@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let earn, total;
+    total = +prompt('Nhập vào số doanh thu')
+    if (total <= 300 && total > 200){
+        earn = total * 30 / 100;
+        document.write('Với doanh số ' + total + ' thì bạn nhận được ' + earn + ' hoa hồng');
+    }else if (total <= 200 && total > 100){
+        earn = total * 20 / 100;
+        document.write('Với doanh số ' + total + ' thì bạn nhận được ' + earn + ' hoa hồng');
+    }else if (total <= 100){
+        earn = total * 10 / 100;
+        document.write('Với doanh số ' + total + ' thì bạn nhận được ' + earn + ' hoa hồng');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    var a,b,s // a, b là 1 cạnh của hình vuông / hình chữ nhật.
+    // s là diện tích.
+    a = +prompt('Nhập vào 1 số');
+    b = +prompt('Nhập vào 1 số');
+    if (a == parseInt(a) && b == parseInt(b)) {
+        if(a == b){
+            alert('Đây là hình vuông')
+            s = a*a;
+            alert('Diện tích hình vuông là '+ s);
+        } else {
+            alert('Đây không phải hình vuông vui lòng nhập lại');
+        }
+    } else {
+        alert('input không hợp lệ');
+    }
+</script>
+
+</body>
+</html>

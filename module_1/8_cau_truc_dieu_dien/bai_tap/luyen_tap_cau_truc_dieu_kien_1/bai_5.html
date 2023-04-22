@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let test, mid, final;
+    test = +prompt('Nhập vào số điểm bài kiểm tra');
+    mid = +prompt('Nhập vào số điểm bài giữa kỳ');
+    final = +prompt('Nhập vào số điểm bài cuôi kỳ');
+    aver = (test + mid + final) / 3;
+    if (aver >= 8) {
+        document.write('Chúc mừng bạn là học sinh giỏi');
+    }else if(aver >= 6.5 && aver < 8 ){
+        document.write('Chúc mừng bạn là học sinh khá');
+    }else if(aver >= 4.5 && aver < 6.5){
+        document.write('Bạn là học sinh kém');
+    }else if(aver < 4.5 ) {
+        document.write('Bạn là học sinh trung bình');
+    }
+</script>
+</body>
+</html>

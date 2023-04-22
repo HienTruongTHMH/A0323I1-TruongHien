@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let bmi ;
+    let weight = prompt('Nhap vao chi so cang nang the cua ban');
+    let height = prompt('Nhap vao chieu cao cua ban');
+    let kg = parseFloat(weight);
+    let m = parseFloat(height);
+    bmi = kg / (m ^ 2);
+    if (bmi < 18.5) {
+        alert('Thieu kg');
+    } else if (bmi < 25) {
+        alert('Binh thuong')
+    } else if (bmi < 30) {
+        alert('Qua kg');
+    } else if (bmi > 30) {
+        alert('Beo phi');
+    }
+</script>
+</html>

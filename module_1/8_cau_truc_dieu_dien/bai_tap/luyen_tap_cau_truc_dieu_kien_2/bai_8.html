@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    var old; // là số tuổi nhập vào
+    old = +prompt('Nhập vào số tuổi muốn kiểm tra');
+    if(old != parseInt(old)){
+        alert('Input sai, vui lòng nhập lại');
+    } else if (old >= 0 && old <= 120){
+        alert('Bạn già '+old+' tuổi');
+    }else {
+        alert("Bạn là người ngoài hành tinh");
+    }
+</script>
+</body>
+</html>

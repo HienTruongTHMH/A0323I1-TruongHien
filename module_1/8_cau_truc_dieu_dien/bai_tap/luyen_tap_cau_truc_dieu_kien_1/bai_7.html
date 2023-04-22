@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    var phi = 1000;
+    let min, pafter, pay;
+    min = +prompt('Nhập vào số phút bạn đã gọi');
+    if(min <= 30){
+        pafter = 0;
+        pay = (phi + pafter) * min;
+
+    }else if(min > 30 && min <= 50){
+        pafter = 500;
+        pay = (phi + pafter) * min;
+    }else if(min > 50 && min <= 70){
+        pafter = 700;
+        pay = (phi + pafter) * min;
+    }
+    document.write('Số tiền bạn phải trả là ' + pay + " vì bạn đã sử dụng " + min + ' phút');
+</script>
+</body>
+</html>

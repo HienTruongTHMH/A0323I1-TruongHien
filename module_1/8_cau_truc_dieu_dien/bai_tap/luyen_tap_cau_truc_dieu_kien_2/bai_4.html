@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    var a,b,s // a, b là 2 cạnh của hình chữ nhật.
+    // s là diện tích.
+    a = +prompt('Nhập vào a số');
+    b = +prompt('Nhập vào b số');
+    if (a == parseInt(a) && b == parseInt(b)) {
+        if(a == b){
+            alert('Đây không phải hình chữ nhật vui lòng nhập lại');
+        } else {
+            alert('Đây là hình chữ nhật');
+            s = a*b;
+            alert('Diện tích hình chữ nhật là ' + s);
+        }
+    } else {
+        alert('input không hợp lệ');
+    }
+</script>
+</body>
+</html>

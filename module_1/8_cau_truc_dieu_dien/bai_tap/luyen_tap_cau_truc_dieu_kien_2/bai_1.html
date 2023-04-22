@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    var doC, doF;
+    let op;
+    op = prompt('op1 nếu bạn mún đổi độ C thành độ F, ngược lại op2');
+    if(op == 'op1'){
+        doC = +prompt('Nhập vào độ C');
+        if(doC == parseInt(doC)){
+            doF = doC * 9 / 5 + 32;
+            alert( doC + 'C = ' + doF + 'F' )
+        } else {
+            alert('Đây không phải số vui lòng nhập lại');
+        }
+    }else if(op == 'op2') {
+        doF = +prompt('Nhập vào độ F');
+        if (doF == parseInt(doF)) {
+            doC = (doF - 32) * 5 / 9;
+            alert(doF + 'F = ' + doC + 'C');
+        } else {
+            alert('Đây không phải số vui lòng nhập lại');
+        }
+    }
+</script>
+</body>
+</html>

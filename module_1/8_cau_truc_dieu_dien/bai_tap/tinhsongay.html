@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" id="month">
+    <button type="button" onclick="countDay()">Tinh so ngay</button>
+</form>
+</body>
+<script>
+    function countDay() {
+        let months;
+        months = parseInt(document.getElementById('month').value);
+        alert(months);
+        switch (months) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+                document.write("Thang " + months + " co 31 ngay");
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+                document.write("Thang " + months + "co 30 ngay");
+                break;
+            case 2:
+                document.write("Thang " + months + " co 28 ngay hoac 29 ngay");
+                break;
+            default:
+                document.write("Thang khong hop le");
+                break;
+        }
+    }
+</script>
+</html>

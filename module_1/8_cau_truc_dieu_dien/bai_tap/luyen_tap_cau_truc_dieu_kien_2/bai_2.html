@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    var op;
+    var ft, m;
+    op = prompt('op1 đổi từ ft sang m, op2 đổi từ m sang ft');
+    if (op == 'op1') {
+        ft = +prompt('Nhập vào ft');
+        if (ft == parseInt(ft)) {
+            m = ft / 3.2808;
+            alert(ft + 'ft' + '=' + m + 'm');
+        } else {
+            alert('input không hợp lệ, vui lòng nhập lại');
+        }
+    } else if (op == 'op2') {
+        m = +prompt('Nhập vào m');
+        if (m == parseInt(m)) {
+            ft = m * 3.2808;
+            alert(m + 'm' + '=' + ft + 'ft');
+        } else {
+            alert('input không hợp lệ, vui lòng nhập lại');
+        }
+    }
+</script>
+</body>
+</html>

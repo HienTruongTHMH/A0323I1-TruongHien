@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    var x, a, b, c; // pt bậc 2 có dạng ax^2 + bx+c = 0
+    a = +prompt('Nhập a');
+    b = +prompt('Nhập b');
+    c = +prompt('Nhập c');
+    pelta = b ** 2
+    4 * a * c;
+    if (a == parseInt(a) && b == parseInt(b) && c == parseInt(c)) {
+        if (pelta < 0) {
+            alert('Pt trên vô nghiệm')
+        } else if(pelta == 0) {
+            alert('pt có dạng ' + a + 'x^2 +' + b + 'x + ' + c + '=0');
+            alert('pt trên có nghiệm kép');
+            x = -b/2*a;
+            alert('x1 = x2 = '+x);
+        } else if(pelta > 0){
+            alert('pt có dạng ' + a + 'x^2 +' + b + 'x + ' + c + '=0');
+            alert('pt trên có 2 nghiệm phân biệt');
+            x1 = ( -b + Math.sqrt(pelta) ) / 2*a;
+            x2 = ( -b - Math.sqrt(pelta) ) / 2*a;
+            alert('2 nghiệm của pt là: '+ x1+' và '+x2);
+        }
+    }else {
+        alert("input sai, nhập lại đi");
+    }
+
+</script>
+</body>
+</html>

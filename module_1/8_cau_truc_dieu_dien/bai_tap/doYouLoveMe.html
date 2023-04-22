@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Do you love me ?</h1>
+<button onclick="yes()">Yes</button>
+<button id='btNo' onmouseover="randomPo()" style="position: absolute">No</button>
+<script>
+    function yes() {
+        alert('<3');
+    }
+    function randomPo() {
+        let bt = document.getElementById('btNo');
+        bt.style.top = parseInt(Math.random()* window.innerHeight) + 'px';
+        bt.style.left= Math.random() * window.innerWidth + 'px';
+    }
+</script>
+</body>
+</html>

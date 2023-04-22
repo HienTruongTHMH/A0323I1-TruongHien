@@ -5,31 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-<form>
-    <p style="font-size: 20px"><b>Amount</b></p>
-    <input type="number" id="number">
-    <p style="font-size: 20px"><b>From Currency</b></p>
-        <select name="money" id="beChanged">
-            <option name="money">Chọn đơn vị tiền tệ</option>
-            <option name="money" value="1">Việt Nam</option>
-            <option name="money" value="23000">USD</option>
-        </select>
-    <p style="font-size: 20px"><b>To Currency</b></p>
-        <select name="monney" id="changed">
-            <option name="money">Chọn đơn vị muốn đổi</option>
-            <option name="money" value="1">Việt Nam</option>
-            <option name="money" value="23000">USD</option>
-        </select>
-    <button style="background-color: purple; color: white" onclick="convert()">Convert</button>
-</form>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr></tr>
+    <td><input type="number" name="amount" id="a"></td>
+    <td><select id="from">
+        <option value="1">Viêt Nam</option>
+        <option value="0.000043">USD</option>
+    </select> </td>
+    <td><select id="to">
+        <option value="0.000043">USD</option>
+        <option value="1">Viêt Nam</option>
+    </select> </td>
+    <td><button type="button" onclick="convert()" id="kq">Convert</button></td>
+    <tr><td><p id="result">Result: </p></td></tr>
+</table>
 </body>
 <script>
     function convert() {
-        let a = parseInt(document.getElementById("number").value);
-        let from = parseInt(document.getElementById("beChanged").value);
-        let to = parseInt(document.getElementById("changed").value);
-        let change = (a * to) / from;
-        alert('Đổi thành công' + change);
+        let a = parseFloat(document.getElementById('a').value);
+        let from = parseFloat(document.getElementById('from').value);
+        let to = parseFloat(document.getElementById('to').value);
+        document.getElementById('result').innerText ='Result: ' + a * to / from;
     }
 </script>
 </html>
