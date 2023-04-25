@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let fn2 = 0;
+    let fn1 = 1;
+    let soLgSoFn = 20;
+    document.writeln('0, 1, ');
+    for (let i = 3; i <= soLgSoFn; i++) {
+        let fn = fn2 + fn1;
+        document.writeln(fn + ',');
+        fn2 = fn1;
+        fn1 = fn;
+    }
+</script>
+</body>
+</html>

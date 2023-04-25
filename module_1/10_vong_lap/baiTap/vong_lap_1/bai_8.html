@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button onclick="bt()">Click Me!</button>
+<script>
+    function bt() {
+        let m = +prompt('Nhập vào số radom từ');
+        let n = +prompt('Đến');
+        for (m; m < n;) {
+            var i = parseInt(Math.random()*n+m);
+            var an = +prompt('Hãy đoán xem');
+            while (an < i || an > i) {
+                if (an < i) {
+                    alert("hãy chọn số lớn hơn");
+                    an = +prompt('Chọn lại');
+                }
+                if (an > i) {
+                    alert("hãy chọn số bé hơn");
+                    an = +prompt('Chọn lại');
+                }
+            }
+            if (an == i) {
+                alert("Bạn đã chọn đúng" + an);
+            }
+        }
+    }
+</script>
+</body>
+</html>

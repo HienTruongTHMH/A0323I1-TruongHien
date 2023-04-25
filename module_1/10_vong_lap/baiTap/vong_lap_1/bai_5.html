@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let fn2 = 0;
+    let fn1 = 1;
+    let soLgSoFn = 20;
+    let fn;
+    let sum = 1;
+    document.writeln('0, 1, ');
+    for (let i = 3; i <= soLgSoFn; i++) {
+        fn = fn2 + fn1;
+        document.writeln(fn + ',');
+        sum += fn;
+        fn2 = fn1;
+        fn1 = fn;
+    }
+    document.write(' Tổng của 20 số fa đầu là: ' + sum);
+</script>
+</body>
+</html>

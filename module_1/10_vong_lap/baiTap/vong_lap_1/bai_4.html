@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    var fn;
+    let fn2 = 0;
+    let fn1 = 1;
+    let soLgSoFn = 20;
+    document.writeln('0, 1, ');
+    for (let i = 3; i <= soLgSoFn; i++) {
+        fn = fn2 + fn1;
+        if(fn % 5 == 0){
+            document.writeln('Đây là số đầu tiên chia hết cho 5: '+ fn );
+            break;
+        }
+        document.writeln(fn + ',');
+        fn2 = fn1;
+        fn1 = fn;
+    }
+</script>
+</body>
+</html>

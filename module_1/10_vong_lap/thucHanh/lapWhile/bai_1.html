@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<h1>Js while loops</h1>
+<p>Result is: </p><p id='result'></p>
+<script>
+    let n = +prompt('Emter ur number:');
+    let sum = 0;
+    while (n != -1){
+        n = +prompt('Emter ur number:');
+        alert(sum);
+        sum += n;
+    }
+    document.getElementById('result').innerText = sum;
+</script>
+</body>
+</html>
