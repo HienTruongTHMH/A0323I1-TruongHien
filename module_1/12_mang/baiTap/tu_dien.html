@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<form>
+    Từ điển Anh-Việt:
+    <br>
+    <input type="text" id="tiengViet" placeholder="Hãy nhập tiếng việt">
+    <input type="text" id="tiengAnh" placeholder="Hãy nhập tiếng anh">
+    <button type="button" onclick="trans()">Dịch</button>
+    <p id="result">Kết quả hiển thị tại đây:</p>
+</form>
+<script>
+    function trans() {
+        let english = ['Dog', 'Cat', 'Elephant', 'Gun'];
+        let vietnamese = ['Chó', 'Mèo', 'Voi', 'Súng'];
+        var eng = english.indexOf(document.getElementById('tiengAnh').value);
+        var viet = vietnamese.indexOf(document.getElementById('tiengViet').value);
+        for (let i = 0; i < vietnamese.length; i++) {
+            if (i == eng) {
+                result = vietnamese[i];
+            }
+        }
+        for (let j = 0; j < english.length; j++) {
+            if (j == viet) {
+                result = english[j];
+            }
+        }
+        document.getElementById('result').innerText = result ;
+    }
+
+</script>
+</body>
+</html>

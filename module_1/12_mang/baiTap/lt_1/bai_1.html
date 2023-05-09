@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = [10,21,24,25,26,27,18,23,1,2];
+    document.writeln('10 số nguyên trong mảng là: '+ str + '<br>');
+    let longHon = [], beHon = [] , bang = [];
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] > 10) {
+            longHon.push(str[i]);
+        } else if (str[i] < 10) {
+            beHon.push(str[i]);
+        } else if (str[i] == 10) {
+            bang.push(str[i]);
+        }
+    }
+    document.writeln('Đây là các số lớn hơn 10: ' + longHon + '<br>');
+    document.writeln('Đây là các số bé hơn 10: ' + beHon + '<br>');
+    document.writeln('Đây là các số bằng 10: ' + bang + '<br>');
+
+
+</script>
+</body>
+</html>

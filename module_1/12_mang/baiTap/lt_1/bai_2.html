@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = [10,21,24,25,26,27,28,29,100,2];
+    document.writeln('10 số nguyên trong mảng là: '+ str + '<br>');
+    let max = str[0]
+    for(let i = 0; i < str.length; i++){
+        if(str[i] >= max ){
+            max = str[i];
+            var position = i;
+        }
+    }
+    document.writeln('Số lớn nhất trong mảng là: ' + max + ' vị trí của số đó trong mảng đó là: ' + (position+1));
+
+</script>
+</body>
+</html>

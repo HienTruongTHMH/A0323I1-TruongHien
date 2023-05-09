@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang 1 chieu</title>
+</head>
+<body>
+<script>
+    var array = ['item 1', 'item 2', 'item 3'];
+    for (let i = 0; i < array.length; i++){
+        console.log('Đây là vị trí: ' + i + 'có giá trị là: ' + array[i]);
+    }
+
+    array.unshift('item 0'); // thêm phần tử vào vị trí đầu tiên trong mảng.
+    alert(array[0]);
+
+    array.push('bmw'); // thêm phần từ vào vị trí sau của mảng;
+    alert(array[array.length - 1]);
+    alert(array.length);
+
+    let deleteFirst = array.shift(); // xóa đi pt đầu tiên.
+    alert(array[0]);
+    alert(array.length);
+
+    let deleteLast = array.pop(); // xóa pt cuối cùng của mảng
+    alert(array[array.length - 1]);
+    alert(array.length);
+
+
+
+</script>
+
+</body>
+</html>

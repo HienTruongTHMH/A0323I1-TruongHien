@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let value = +prompt('Nhập vào giá trị bạn muốn tìm');
+    let arr = [3,7,5,2];
+    for (let i = 0; i < arr.length; i++) {
+        if (value == arr[i]) {
+            alert("Giá trị " + arr[i] + " tại vị trí thứ " + i);
+        }
+        if (value != arr[i]){
+            alert('không có giá trị này trong mảng')
+        }
+    }
+</script>
+</body>
+</html>

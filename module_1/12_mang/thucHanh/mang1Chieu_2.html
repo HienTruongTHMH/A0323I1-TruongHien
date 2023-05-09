@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xắp xếp mảng</title>
+</head>
+<body>
+<script>
+    var arr1 = ['i2','i4','i1', 'i3'];
+    alert(arr1);
+    var arr2 = ['B','A','C','D'];
+    var arrNumbers = [100,25,15,26,19];
+    let sortArr1 = arr1.sort();
+    console.log(sortArr1);
+    let sortArr2 = arr2.sort();
+    console.log(sortArr2);
+    let sortNumbers = arrNumbers.sort();
+    console.log(sortNumbers);
+    sortNumbers.sort(function (a, b) {
+        return a - b;
+    })
+    console.log(sortNumbers);
+    /* Thuộc tính của mảng .sort() sẽ giúp ta xắp xếp các giá trị hay phần tử trong mảng theo quy tắc
+    * ví dụ như arr1 và arr2 sẽ sắp xếp theo số đếm và bảng chữ cái
+    * còn arrNumbers sẽ bị lỗi vì nó sẽ lấy số đầu tiên của phẩn tử là giá trị so sánh do đó 15, 19 và 100 sẽ ở trước 25 và 26*/
+</script>
+</body>
+</html>

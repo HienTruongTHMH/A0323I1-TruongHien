@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = [1,2,5,7,9,21,24,32,26,33];
+    document.writeln('10 số nguyên trong mảng là: '+ str + '<br>');
+    let max = str[0]
+    let sum = 0;
+    for(let i = 0; i < str.length; i++){
+        if(str[i] >= max ){
+            max = str[i];
+        }
+        sum += str[i];
+    }
+    let aver = sum / (str.length+1);
+    document.writeln('Số lớn nhất trong mảng là: ' + max + ' giá trị trung bình các số trong mảng đó là: ' + aver );
+</script>
+</body>
+</html>

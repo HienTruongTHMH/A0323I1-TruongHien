@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng đa chiều</title>
+</head>
+<body>
+<script>
+    var cities = [
+        ['Sài Gòn', 'Hà Nội', 'Đà Nẵng'],
+        ['Newyork','California','Swinburne','Mỹ tho']
+    ]
+    console.log(cities.length); // có 2 dòng ;
+    console.log(cities[0].length); // 3 phần tử trong mảng dòng 0;
+    console.log(cities[1].length); // 4 phần tử trong mảng dòng 1;
+    // [dòng] [cột];
+    console.log(cities[0][0]);
+    console.log(cities[0][1]);
+    for(let i = 0; i < cities.length; i++){
+        let check = cities[i];
+        console.log(check);
+        for (let j = 0; j < cities[i].length; j++){
+            document.writeln('Dòng '+i+' Cột '+j+ ' có giá trị là: '+ cities[i][j] + '<br>');
+        }
+    }
+</script>
+</body>
+</html>

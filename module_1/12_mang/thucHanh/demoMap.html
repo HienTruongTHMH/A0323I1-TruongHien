@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<script>
+    const cars = [
+        {
+            'id': 1,
+            'name': 'Mec'
+        },
+        {
+            'id': 2,
+            'name': 'BMW'
+        }
+    ]
+    var animals = [
+        {
+            id: 1,
+            name : 'cat'
+        },
+        {
+            id: 2,
+            name : 'dog'
+        }
+    ]
+    var newCar = cars.map(function (cars) {
+        if (cars.id == 1) {
+            cars.name = 'lexus';
+        }
+        return cars;
+    })
+    var newAnimal = animals.map(function (animals) {
+        if (animals.id == 2) {
+            animals.name = 'tiger';
+        }
+        return animals;
+    })
+    console.log(cars);
+    console.log(animals);
+</script>
+</body>
+</html>
