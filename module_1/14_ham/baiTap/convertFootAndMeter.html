@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Feet</label>
+        <input id="inputFeet" type="number" placeholder="Feet"
+               oninput="footToMeter(this.value)"
+               onchange="footToMeter(this.value)">
+    </p>
+    <p id="resultFeet">Kết quả: </p>
+    <p>
+        <label>Meet</label>
+        <input id="inputMeet" type="number" placeholder="Meet"
+               oninput="meterToFoot(this.value)"
+               onchange="meterToFoot(this.value)">
+    </p>
+    <p id="resultMeet">Kết quả: </p>
+
+</form>
+<script>
+    function footToMeter(foot) {
+        foot = document.getElementById('inputFeet').value;
+        let meet = 0.305 * foot;
+        document.getElementById('resultFeet').innerText = meet;
+    }
+    function meterToFoot(meter) {
+        meet = document.getElementById('inputMeet').value;
+        let foot = 3.279 * meet;
+        document.getElementById('resultMeet').innerText = foot;
+    }
+
+</script>
+</body>
+</html>

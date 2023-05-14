@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhap vao ki tu bat ki');
+
+    if(checkNum(n)){
+        document.writeln('Day la ki tu so');
+    } else if (!checkNum(n)){
+        document.writeln('Day khong phai la ki tu so');
+    }
+    function checkNum(number) {
+        let array = number.split(' ');
+        for (let i = 0; i < array.length ; i++) {
+            if(array[i] % array[i] == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>

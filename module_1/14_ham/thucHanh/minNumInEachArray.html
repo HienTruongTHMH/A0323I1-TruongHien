@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [2,4,1,5,7];
+    let arr2 = [1,2,1,1,1];
+    let arr3 = [0,0,0,0];
+    let arr = [];
+    console.log(minArr(arr));
+    console.log(minArr(arr1));
+    console.log(minArr(arr2));
+    console.log(minArr(arr3));
+
+    function minArr(arr) {
+        let min = arr[0];
+        if(arr.length == 0){
+            console.log('day la mang rong');
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min)
+                min = arr[i];
+
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

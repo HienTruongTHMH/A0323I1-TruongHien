@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt();
+    // let array = str.split(' ');
+    let n = prompt('Nhap vao 1 ki tu de kiem tra');
+    checkV(n);
+    function checkV(v) {
+        let count = 0;
+        for (let i = 0; i < str.length ; i++) {
+            if(str[i] == v){
+                count++;
+            } else {
+                return -1;
+            }
+        }
+        document.write('so lan xuat hien cua ky tu: ' + v + ' trong mang la: '+ count);
+    }
+</script>
+</body>
+</html>

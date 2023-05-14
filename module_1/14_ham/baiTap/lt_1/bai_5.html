@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "Polaris,Aldebaran,Deneb,Vega,Altair,Dubhe,Regulus";
+    let str2 = "Ursa Minor,Tarurus,Cygnus,Lyra,Aquila,Ursa Major,Leo";
+    let arr = str.split(',');
+    let arr2 = str2.split(',');
+    let text = prompt('Nhập vào chòm sao bạn mún tìm');
+    checkLocal(text);
+    function checkLocal(text) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == text) {
+                alert('Vị trí tương ứng của ' + arr[i] +' là ' + arr2[i]);
+            } else {
+                alert('Nhập lại, không tìm thấy chòm sao tương ứng' );
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

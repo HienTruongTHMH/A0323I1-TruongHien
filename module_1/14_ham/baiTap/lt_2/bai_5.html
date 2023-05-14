@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhap vao 1 so nguyen: ');
+    let b = +prompt('Nhap vao 1 so nguyen: ');
+    let c = +prompt('Nhap vao 1 so nguyen: ');
+    document.write('So nho nhat trong 3 chu so la: ' + minNumber(a, b, c));
+    function minNumber(soThuNhat, soThuHai, soThuBa) {
+        let min = soThuNhat;
+        if (soThuHai < min) {
+            min = soThuHai;
+        }
+        if (soThuBa < min) {
+            min = soThuBa;
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

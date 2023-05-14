@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soLgSNT = 0;
+    var prime = 2;
+    while (soLgSNT < 1000) {
+        if (isPrime(prime)) {
+            soLgSNT++;
+            console.log(prime);
+        }
+        prime++;
+    }
+
+    function isPrime(val) {
+        if (val < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < val; i++) {
+                if (val % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Chuyển đổi nhiệt độ</h1>
+    <p>Nhập vào giá trị của F để đổi thành nhiệt độ C</p>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="temConvert(this.value)"
+               onchange="temConvert(this.value)">
+    </p>
+    <p>Cel:<span id="result"></span></p>
+</form>
+<script>
+    function temConvert(val) {
+        val = parseFloat(val);
+        document.getElementById('result').innerText = (val - 32) / 1.8;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhap vao ban kinh hinh tron');
+    document.write('Voi ban kinh la: ' + n +' thi: ' +'<br>' );
+    document.write('Diện tích hình tròn có bán kính là: ' + dienTichHinhTron(n) + '<br>');
+    document.write('Chu vi hinh tron la: ' + chuViHinhTron(n));
+    function dienTichHinhTron(r) {
+        let S = r*r*3.14;
+        parseFloat(S);
+        return S;
+    }
+    function chuViHinhTron(r) {
+        let C = 2*r*3.14;
+        parseFloat(C);
+        return C;
+    }
+</script>
+</body>
+</html>
