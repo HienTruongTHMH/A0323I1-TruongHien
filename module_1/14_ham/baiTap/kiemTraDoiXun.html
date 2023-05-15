@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><input type="text" id="text">
+    <button onclick="isPalindrome()">
+        Check
+    </button>
+</p>
+<p id="result">
+
+</p>
+<script>
+    function isPalindrome() {
+        let n = document.getElementById('text').value;
+        let array = n.split('');
+        let flag = false;
+        firstWord = 0;
+        lastWord = array.length-1 ;
+        while (firstWord < lastWord){
+            if(array[firstWord] === array[lastWord]){
+                flag = true
+            } else if (array[firstWord] !== array[lastWord]){
+                flag = false;
+            }
+            firstWord++;
+            lastWord--;
+        }
+        if (!flag){
+            document.getElementById('result').innerText = 'Sai';
+        } else {
+            document.getElementById('result').innerText = 'Đúng';
+        }
+    }
+</script>
+</body>
+</html>

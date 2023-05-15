@@ -7,19 +7,23 @@
 <body>
 <script>
     let str = prompt();
-    // let array = str.split(' ');
-    let n = prompt('Nhap vao 1 ki tu de kiem tra');
+    let array = str.split(' ');
+    let n = prompt('Nhập vào kí tự kiểm tra');
     checkV(n);
     function checkV(v) {
+        let flag = false;
         let count = 0;
-        for (let i = 0; i < str.length ; i++) {
+        for (let i = 0; i < str.length; i++) {
             if(str[i] == v){
+                flag = true;
                 count++;
-            } else {
-                return -1;
             }
         }
-        document.write('so lan xuat hien cua ky tu: ' + v + ' trong mang la: '+ count);
+        if(!flag){
+            document.write('không có kí tự' + v + 'trong mảng');
+            return -1;
+        }
+        document.write('so lan xuat hien cua ky tu: ' + v + ' trong mang: '+array.join(' ')+' la: '+ count);
     }
 </script>
 </body>

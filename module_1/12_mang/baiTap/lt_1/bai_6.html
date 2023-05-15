@@ -6,14 +6,23 @@
 </head>
 <body>
 <script>
-    let str = [10,21,24,25,26,27,18,23,1,2];
-    document.writeln('10 số nguyên trong mảng là: '+ str + '<br>');
-    let check = +prompt();
-    if (str.indexOf(check) !== -1){
-        alert('Số '+check+' có trong mảng');
-    }else {
-        alert('Số '+check+' không có trong mảng');
+    // let str = [10,21,24,25,26,27,18,23,1,2];
+    let arr = prompt('Nhập vào');
+    let str = arr.split(' ');
+    document.writeln('Các số nguyên trong mảng là: '+ str + '<br>');
+    let check = prompt();
+    let flag = false;
+    for (let i = 0; i < str.length; i++) {
+        if(str[i] == check){
+            alert('số ' + check + ' có trong mảng');
+            flag = true;
+            break;
+        }
     }
+    if (!flag){
+        alert('số ' + check + ' không có trong mảng');
+    }
+
 </script>
 </body>
 </html>
