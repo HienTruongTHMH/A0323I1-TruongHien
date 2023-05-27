@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200", height="200"></canvas>
+<script>
+    class Retangle{
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+        getChieuDai(){
+            return this.chieuDai;
+        }
+        getChieuRong(){
+            return this.chieuRong;
+        }
+        getArea(){
+            return this.chieuDai * this.chieuRong;
+        }
+        getC(){
+            return (this.chieuRong + this.chieuDai) * 2;
+        }
+        display(){
+            return 'Diện tích hình chữ nhật là: ' + this.getArea() + ' chu vi hình chữ nhật là: ' + this.getC();
+        }
+    }
+    let hcn = new Retangle(100,150);
+    console.log(hcn.chieuDai);
+    console.log(hcn.chieuRong);
+
+    console.log(hcn.getArea());
+    console.log(hcn.getC());
+
+    alert(hcn.display());
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillRect(0,0,hcn.chieuRong,hcn.chieuDai);
+</script>
+</body>
+</html>

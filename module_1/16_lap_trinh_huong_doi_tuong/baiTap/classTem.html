@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        getC(){
+            return this.c;
+        }
+        translateCToF(){
+            return this.c * 1.8 + 32;
+        }
+        translateCToK(){
+            return this.c + 273.5;
+        }
+        display(){
+            return this.c + ' độ C sau khi đổi là: ' + ' Độ F: ' + this.translateCToF() + ' Độ K: ' + this.translateCToK();
+        }
+    }
+    let temp = new Temperature(25);
+    if(temp.getC() <= -273){
+        alert('Nhiệt độ C nhỏ nhất là: -273 vui lòng nhập lại' );
+    }
+    document.getElementById('result').innerText = temp.display();
+</script>
+</body>
+</html>

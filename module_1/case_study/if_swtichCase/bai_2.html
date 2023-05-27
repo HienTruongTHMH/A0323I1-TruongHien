@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let c = prompt('Nhap vao ki tu bat ky');
+    laNgyenAm(c);
+
+    function laNgyenAm(c) {
+        let flag = false;
+        let nguyenAm = ['o','u','i','a','e','O','U','I','A','E'];
+        for (let i = 0; i < nguyenAm.length ; i++) {
+            if(nguyenAm[i] === c){
+                flag = true;
+            }
+        }
+        if(!flag){
+            alert('Day khong phai la nguyen am');
+        }   else {
+            alert("day la nguyen am");
+        }
+    }
+</script>
+</body>
+</html>

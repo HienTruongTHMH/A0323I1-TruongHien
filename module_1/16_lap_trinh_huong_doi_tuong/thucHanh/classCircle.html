@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(radius) {
+            this.radius = radius;
+        }
+        getRadius(){
+            return this.radius ;
+        }
+        setRadius(radius){
+            return this.radius = radius;
+        }
+        getArea(){
+            return Math.PI * radius * radius;
+        }
+        display(){
+            return 'hình tròn có bán kính là: ' + this.radius + ' và bán kính của hình tròn là ' + this.getArea();
+        }
+    }
+    let myCircle = new Circle(2);
+    let radius = myCircle.getRadius();
+
+    alert(radius);
+    console.log(myCircle.radius);
+
+    console.log(myCircle.getArea());
+
+    alert(myCircle.display());
+</script>
+</body>
+</html>

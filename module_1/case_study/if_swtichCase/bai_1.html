@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = +prompt('Hay nhap vao so luong cua ban');
+    let tax;
+    let income;
+    if(salary >= 15000000){
+        tax = 0.2;
+        afterTax = salary * tax;
+    } else if (salary >= 700000 && salary < 15000000){
+        tax = 0.1;
+        afterTax = salary * tax;
+    } else if (salary < 7000000){
+        tax = 0.05;
+        afterTax = salary * tax;
+    }
+    income = salary - afterTax;
+    alert('Luong cua ban la: ' + salary +' luong cua ban sau khi chiu thue la: ' + income);
+</script>
+</body>
+</html>
