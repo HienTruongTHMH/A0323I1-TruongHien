@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <img src="pikachu.png" height="300" width="300"/>-->
+<div id="game"></div>
+<button onclick="pika.moveRight()">Move right</button>
+<button onclick="pika.moveLeft()">Move left</button>
+<button onclick="pika.moveUp()">Move up</button>
+<button onclick="pika.moveDown()">Move down</button>
+<script>
+    class character {
+        constructor(image, size, speed, top, left) {
+            this.image = image;
+            this.speed = speed;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getCharacter() {
+            return '<img width= "' + this.size + '" ' + 'height = "' + this.size + '" '
+                + 'src = "' + this.image + '"'
+                + 'style = "' + 'top: ' + this.top +'px; left: '
+                + this.left + 'px; position: absolute;" />';
+        }
+
+        moveRight () {
+            this.left += this.speed;
+            document.getElementById('game').innerHTML = pika.getCharacter();
+            console.log('OK move right: ' + this.speed + 'px');
+        }
+
+        moveLeft() {
+            this.left -= this.speed;
+            document.getElementById('game').innerHTML = pika.getCharacter();
+            console.log('OK move left: ' + this.speed + 'px');
+        }
+
+        moveUp() {
+            this.top -= this.speed;
+            document.getElementById('game').innerHTML = pika.getCharacter();
+            console.log('OK move up: ' + this.speed + 'px');
+        }
+
+        moveDown() {
+            this.top += this.speed;
+            document.getElementById('game').innerHTML = pika.getCharacter();
+            console.log('OK move down: ' + this.speed + 'px');
+        }
+
+    }
+
+    let pika = new character('pikachu.png', 300, 100, 200, 200);
+    document.getElementById('game').innerHTML = pika.getCharacter();
+</script>
+</body>
+</html>

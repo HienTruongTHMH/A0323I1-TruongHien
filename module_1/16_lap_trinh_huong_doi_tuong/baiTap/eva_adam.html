@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+            this.apple = true;
+        }
+
+        setAppleWeight(weight) {
+            this.weight -= weight;
+        }
+
+        getAppleWeight() {
+            if (this.weight > 10) {
+                console.log('qua tao quai vat, chon qua nao nho hon 10kg ay');
+            } else if (this.weight < 10) {
+                return this.weight;
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setWeight(weight) {
+            this.weight += weight;
+        }
+
+        speak(person) {
+            let text = prompt('Nhap vao loi thoai nhan vat ' + this.name);
+            console.log(this.name + ' noi voi ' + person.getName() + ' ' + text);
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        checkGender() {
+            if (this.getGender() === 'male') {
+                console.log('this is male');
+            } else if (this.getGender() === 'female') {
+                console.log('this is female');
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        checkApple(apple) {
+            return apple.getAppleWeight();
+        }
+
+        eatApple(apple) {
+            if (apple.getAppleWeight() < 10) {
+                this.setWeight(1);
+
+                apple.setAppleWeight(1);
+
+                console.log('ngon qua')
+            }
+
+        }
+
+    }
+
+    let human1 = new Human('eva', 'female', 50);
+    let human2 = new Human('Adam', 'male', 65);
+
+    let app1 = new Apple(8);
+    let app2 = new Apple(9);
+    let app3 = new Apple(20);
+
+    human1.speak(human2);
+
+    human2.eatApple(app1);
+
+    human2.eatApple(app3);
+
+    human1.checkGender();
+    human2.checkGender();
+</script>
+</body>
+</html>
