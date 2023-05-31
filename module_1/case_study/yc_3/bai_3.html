@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = [5,2,5];
+    let b = [6,3,4];
+
+    maxFraction(a,b);
+
+    function maxFraction(mangTuSo, mangMauSo) {
+        let mangLuaSo = [];
+        let max = mangTuSo[0] / mangMauSo[0];
+        for (let i = 0; i < mangTuSo.length; i++) {
+            let number;
+            for (let j = 0; j < mangMauSo.length; j++){
+                number = mangTuSo[i] / mangMauSo[j];
+                mangLuaSo.push(number);
+                if(number > max){
+                    max = number;
+                }
+            }
+        }
+
+        let count = 0;
+        for (let a = 0; a < mangLuaSo.length; a++){
+            if(mangLuaSo[a] === max){
+                count++;
+            }
+        }
+        console.log('Phan so lon nhat la: ' + max + ' co chi so la: ' + count);
+    }
+</script>
+</body>
+</html>

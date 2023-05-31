@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 'hEllo   sAAF';
+
+    function fixString(str) {
+        for (let i = 0; i < str.length ; i++) {
+            if(str[i] == '&nbsp&nbsp'){
+                str[i].shift(i)
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

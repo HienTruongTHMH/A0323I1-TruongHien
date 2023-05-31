@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = "result"></p>
+<p id = 'bill'></p>
+
+<script>
+    class Drinks {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+    }
+
+    let d1 = new Drinks('Cafe', 12000);
+    let d2 = new Drinks('Cam vắt', 12000);
+    let d3 = new Drinks('Ép Carrot', 12000);
+    let d4 = new Drinks('Ép Cà chua', 12000);
+    let d5 = new Drinks('Nước lọc', 12000);
+    let d6 = new Drinks('Nước dừa', 12000);
+
+    let drinkMenu = [];
+
+    drinkMenu.push(d1, d2, d3, d4, d5, d6);
+
+    display(drinkMenu);
+
+    function display(list) {
+        let tableString = '<table border="1" style="border-collapse: collapse">' +
+            '<tr>' +
+            '<th colspan="2">' +
+            'Menu' +
+            '</th>' +
+            '</tr>' +
+            '<tr>' + '<th> Drink </th>' + '<th>Price</th>' + '</tr>'
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>';
+            tableString += '<td onclick="order(' +i +')"> ' + list[i].getName() + '</td>' +
+                '<td>' + list[i].getPrice() + '</td>' +
+                '</tr>';
+        }
+        tableString += '<tr> <th colspan="2" ONCLICK="showBill()"> DONE </th> </tr>';
+        tableString += '</table>';
+        document.getElementById('result').innerHTML = tableString;
+    }
+
+    let listOrder = [];
+    let payMent = 0;
+
+    function order(index) {
+
+        for (let i = 0; i < drinkMenu.length; i++){
+            if(index === i){
+                listOrder.push(drinkMenu[i].getName());
+                payMent += drinkMenu[i].getPrice();
+            }
+        }
+        alert('ban da order: ' + listOrder.toString() + ' Gia phai tra la: ' + payMent);
+    }
+
+    function showBill() {
+        document.getElementById('bill').innerText = 'Ban da order ' + listOrder.toString() + ' gia phai tra la ' + payMent;
+    }
+</script>
+</body>
+</html>
