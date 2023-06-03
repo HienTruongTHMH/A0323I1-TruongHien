@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = 'aabbcc';
+    differentSymbolsNaive(s);
+    function differentSymbolsNaive(s) {
+        let str = s.split('');
+        let arr = str.sort();
+        let newArr = [];
+        let count = 0;
+        for(let i =0; i < arr.length; i++){
+            if(arr[i] !== arr[i-1]){
+                newArr.push(s[i]);
+                count++;
+            }
+        }
+        console.log(newArr);
+        document.write('có '+ count + ' từ khác nhau ' + newArr.toString())
+    }
+</script>
+</body>
+</html>
