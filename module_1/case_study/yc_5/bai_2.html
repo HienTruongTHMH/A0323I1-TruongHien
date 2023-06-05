@@ -15,18 +15,31 @@
         arr[col] = new Array(n);
         for (let rol = 0; rol < arr[col].length; rol++) {
             arr[col][rol] = num;
-            for(let z = 2; z < arr[col][rol]; z++ ){
-                let count = 0;
-                if(arr[col][rol] % z === 0){
-                    count++;
-                }
-                if(count === 0){
-                    countSnt++;
-                    document.write(arr[col][rol]);
-                }
+            if(isPrime(arr[col][rol])){
+                console.log(arr[col][rol]);
+                countSnt++;
             }
             num++;
         }
+    }
+
+    console.log(arr);
+    console.log(countSnt);
+
+    function isPrime(num) {
+        let flag = true;
+        if (num < 2){
+            flag = false;
+        } else {
+            for (let i = 2; i < num ; i++) {
+                if(num % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+
+        }
+        return flag;
     }
 </script>
 </body>
