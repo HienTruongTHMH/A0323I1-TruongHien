@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <button onclick="addStudent()">Them moi hoc sinh</button>
+    <button onclick="fixStudent()">Sua thong tin hoc sinh</button>
+    <button onclick="deleteStudent()">Xoa thong tin hoc sinh</button>
+</p>
+<p id="result"></p>
+
+<script>
+
+    class Student {
+        constructor(id, name, classRoom, email, birth, module) {
+            this.id = id;
+            this.name = name;
+            this.classRoom = classRoom;
+            this.email = email;
+            this.birth = birth;
+            this.module = module;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getClassRoom() {
+            return this.classRoom;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getBirth() {
+            return this.birth;
+        }
+
+        getModule() {
+            return this.module;
+        }
+    }
+
+    function displayTable(list) {
+        let tableStr = '<table border="1" style="border-collapse: collapse"> <tr>\n' +
+            '        <th>Mã học sinh</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>Lớp</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Ngày sinh</th>' +
+            '        <th>Module</th>' +
+            '        </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableStr += '<tr>';
+            tableStr += '<td>' + 'H' + list[i].getId() + '</td>'
+                + '<td>' + list[i].getName() + '</td>'
+                + '<td>' + list[i].getClassRoom() + '</td>'
+                + '<td>' + list[i].getEmail() + '</td>'
+                + '<td>' + list[i].getBirth() + '</td>'
+                + '<td>' + list[i].getModule() + '</td>'
+            tableStr += '</tr>';
+        }
+        tableStr += '</table>';
+        document.getElementById('result').innerHTML = tableStr;
+    }
+
+    function addStudent() {
+        let id = prompt('Hay nhap vao id cua ban.');
+        let name = prompt('Hay nhap vao name cua ban.');
+        let classRoom = prompt('Hay nhap vao classRoom cua ban')
+        let email = prompt('Hay nhap vao email cua ban.');
+        let brith = prompt('Hay nhap vao ngay sinh cua ban.');
+        let module = prompt('Hay nhap vao module cua ban.');
+        let newStudent = new Student(id, name, classRoom, email, brith, module);
+        studentList.push(newStudent);
+        displayTable(studentList);
+    }
+
+    function fixStudent() {
+        let mss = +prompt('MSS ban muon sua thong tin');
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].getId() === mss) {
+                let cof = confirm('Ban co muon thay doi tt cua ' + mss);
+                if (cof) {
+                    let idNew = prompt('Hay nhap vao id cua ban.');
+                    let nameNew = prompt('Hay nhap vao name cua ban.');
+                    let classNew = prompt('Hay nhap vao classRoom cua ban')
+                    let emailNew = prompt('Hay nhap vao email cua ban.');
+                    let brithNew = prompt('Hay nhap vao ngay sinh cua ban.');
+                    let modulNew = prompt('Hay nhap vao module cua ban.');
+                    let fixedStudent = new Student(idNew, nameNew, classNew, emailNew, brithNew, modulNew);
+                    studentList.splice(i, 1, fixedStudent);
+                }
+            } else {
+                alert('vui long nhap lai khong co mss nay');
+            }
+        }
+        displayTable(studentList);
+    }
+
+    function deleteStudent() {
+        let mss = +prompt('hay nhap ma so sinh vien ban muon xoa');
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].getId() === mss) {
+                let cof = confirm('Ban co muon xoa ' + studentList[i].getName() + ' H' + studentList[i].getId());
+                if (cof) {
+                    studentList.splice(i, 1)
+                }
+            } else {
+                alert('khong co sinh vien nay')
+            }
+        }
+        displayTable(studentList);
+    }
+
+    let st1 = new Student(1, 'Nguyen A', 'C1', 'nguyena1@gmail.com', '08/11/2004', 2);
+    let st2 = new Student(2, 'Nguyen B', 'C2', 'nguyena2@gmail.com', '20/10/2004', 1);
+    let st3 = new Student(3, 'Nguyen C', 'C3', 'nguyena3@gmail.com', '18/01/2004', 3);
+    let studentList = [];
+    studentList.push(st1, st2, st3);
+    displayTable(studentList);
+</script>
+</body>
+</html>

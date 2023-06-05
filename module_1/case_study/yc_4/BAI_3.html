@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = 'aabcaa';
+    let str2 = 'abbcrg';
+    let newStr1 = [];
+    let count = 0;
+    for (let i = 0; i < str1.length; i++) {
+        newStr1.push(str1.slice(i, i + 1));
+    }
+    let newStr2 = [];
+    for (let j = 0; j < str2.length; j++) {
+        newStr2.push(str2.slice(j, j + 1));
+    }
+    let commonChar = [];
+    for (let z = 0; z < newStr1.length; z++) {
+        if (newStr2.indexOf(newStr1[z]) !== -1) {
+            commonChar.push(newStr1[z]);
+        }
+    }
+    alert(commonChar);
+    // alert('co ' + count + ' ki tu chung ');
+</script>
+</body>
+</html>

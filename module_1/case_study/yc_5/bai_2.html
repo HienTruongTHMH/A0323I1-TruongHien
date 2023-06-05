@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt('So dong');
+    let n = +prompt('So cot');
+    let arr = new Array(m);
+    let num = 1;
+    let countSnt = 0;
+    for (let col = 0; col < arr.length; col++) {
+        arr[col] = new Array(n);
+        for (let rol = 0; rol < arr[col].length; rol++) {
+            arr[col][rol] = num;
+            for(let z = 2; z < arr[col][rol]; z++ ){
+                let count = 0;
+                if(arr[col][rol] % z === 0){
+                    count++;
+                }
+                if(count === 0){
+                    countSnt++;
+                    document.write(arr[col][rol]);
+                }
+            }
+            num++;
+        }
+    }
+</script>
+</body>
+</html>
